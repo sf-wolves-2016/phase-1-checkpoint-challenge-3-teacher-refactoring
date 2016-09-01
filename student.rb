@@ -3,8 +3,10 @@ require_relative 'people'
 class Student < People
   attr_reader :phase
 
-  def initialize(options = {})
+   def initialize(options = {})
     @phase = 1
+    @age = options.fetch(:age, 0)
+    @name = options.fetch(:name, "")
   end
 
   def set_phase(num)

@@ -4,8 +4,10 @@ require_relative 'staff'
 class ApprenticeTeacher < Staff
 
   def initialize(options={})
-    @phase = 3
+    @age = options.fetch(:age, 0)
+    @name = options.fetch(:name, "")
     @target_raise = 800
+    @phase = 3
   end
 
   def teach_stuff
