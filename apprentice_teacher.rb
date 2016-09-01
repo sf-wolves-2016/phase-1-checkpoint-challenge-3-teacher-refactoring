@@ -1,6 +1,6 @@
 require_relative 'give_props'
 
-class ApprenticeTeacher < GiveProps
+class ApprenticeTeacher < Educator
   attr_reader :target_raise
 
   def initialize(options={})

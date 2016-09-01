@@ -1,4 +1,4 @@
-class GiveProps
+class Educator
 	attr_accessor :name, :age, :salary, :phase, :target_raise
 
 	def initialize(options = {})

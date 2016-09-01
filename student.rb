@@ -1,6 +1,6 @@
 require_relative 'give_props'
 
-class Student < GiveProps
+class Student < Educator
 
   def initialize(options = {})
     @phase = 1

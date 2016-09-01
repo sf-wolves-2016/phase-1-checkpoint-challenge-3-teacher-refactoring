@@ -1,7 +1,7 @@
 require_relative 'give_props'
 
-class Teacher < GiveProps
-  attr_reader :age, :salary, :phase, :performance_rating, :target_raise
+class Teacher < Educator
+  attr_reader :performance_rating
 
   def initialize(options={})
     @target_raise = 1000
