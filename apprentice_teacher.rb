@@ -1,12 +1,14 @@
-class ApprenticeTeacher
+require File.expand_path('../student.rb', __FILE__)
+
+class ApprenticeTeacher < Student
   attr_reader :age, :salary, :phase, :target_raise
   attr_accessor :name
 
+  PHASE = 3
+
   def initialize(options={})
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
+    super(PHASE, options)
     @target_raise = 800
-    @phase = 3
   end
 
   def offer_high_five
