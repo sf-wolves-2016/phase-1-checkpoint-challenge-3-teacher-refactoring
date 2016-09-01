@@ -1,16 +1,11 @@
-class ApprenticeTeacher
-  attr_reader :age, :salary, :phase, :target_raise
-  attr_accessor :name
+require_relative 'give_props'
+
+class ApprenticeTeacher < GiveProps
+  attr_reader :target_raise
 
   def initialize(options={})
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
     @target_raise = 800
-    @phase = 3
-  end
-
-  def offer_high_five
-    "High five!"
+    super()
   end
 
   def set_phase(num)
@@ -24,15 +19,6 @@ class ApprenticeTeacher
     response += "*drops crazy knowledge bomb* "
     response += "... You're welcome."
     response
-  end
-
-  def salary=(new_salary)
-    puts "This better be good!"
-    @salary = new_salary
-  end
-
-  def receive_raise(raise)
-    @salary += raise
   end
 
   def set_performance_rating(rating)
