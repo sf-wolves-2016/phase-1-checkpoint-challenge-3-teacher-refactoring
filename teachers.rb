@@ -1,15 +1,15 @@
-require_relative 'teachers'
+require_relative 'staff'
 require_relative 'teacher_modules'
 
-class Teacher < Teachers
+class Teachers < Staff
 
   include TeacherModule
 
-  attr_reader :performance_rating
+  attr_reader :salary, :target_raise
 
   def initialize(options={})
     super
-    @target_raise = 1000
+    @phase = 3
   end
 
 end
