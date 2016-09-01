@@ -1,19 +1,15 @@
-require_relative 'school'
+require_relative 'staff'
+require_relative 'teacher_modules'
 
-class Teachers < School
+class Teachers < Staff
 
-  def salary=(new_salary)
-    puts "This better be good!"
-    @salary = new_salary
-  end
+  include TeacherModule
 
-  def receive_raise(raise)
-    @salary += raise
-  end
+  attr_reader :salary, :target_raise
 
-  def set_phase(num)
-    @phase = num
-    "Cool, I've always wanted to teach phase #{num}!"
+  def initialize(options={})
+    super
+    @phase = 3
   end
 
 end
