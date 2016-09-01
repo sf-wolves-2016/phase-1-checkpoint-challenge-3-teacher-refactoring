@@ -1,9 +1,9 @@
-require_relative 'teacher_class'
+require_relative 'teacher_student_class'
 require_relative 'teacher_module'
 
 class ApprenticeTeacher < TeacherStudent
   include Teachers
-  
+
   def initialize(options={})
     super
     @target_raise = 800

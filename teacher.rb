@@ -1,4 +1,4 @@
-require_relative 'teacher_class'
+require_relative 'teacher_student_class'
 require_relative 'teacher_module'
 
 class Teacher < TeacherStudent
