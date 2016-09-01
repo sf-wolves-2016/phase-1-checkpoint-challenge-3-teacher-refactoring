@@ -20,7 +20,6 @@ module Teachers
   end
 
   def set_performance_rating(rating)
-    response = ""
     if rating > @rating_needed
       response = "Yay, I'm a great employee!"
       receive_raise(@target_raise)
