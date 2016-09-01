@@ -8,11 +8,10 @@ class ApprenticeTeacher < People
     @target_raise = 800
     @phase = 3
     @rating_needed = 80
+    @first = '.'
+    @second = 'crazy'
+    @third = ''
     super
-  end
-
-  def teach_stuff
-    response = "Listen, class, this is how everything works. *drops crazy knowledge bomb* ... You're welcome."
   end
 
   def attend_training_session

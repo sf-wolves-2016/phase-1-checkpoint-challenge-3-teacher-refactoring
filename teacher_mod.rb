@@ -11,6 +11,10 @@ module Teachers
     @salary = new_salary
   end
 
+  def teach_stuff
+    response = "Listen, class, this is how everything works#{@first} *drops #{@second} knowledge bomb* ... You're welcome.#{@third}"
+  end
+
   def receive_raise(raise)
     @salary += raise
   end
