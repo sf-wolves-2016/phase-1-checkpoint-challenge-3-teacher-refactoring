@@ -6,8 +6,7 @@ class Student < Behaviors
 
   def initialize(options = {})
     @phase = 1
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
+    super
   end
 
   def set_phase(num)
