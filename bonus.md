@@ -3,8 +3,10 @@
 Edit this file to answer the following questions. Give examples. You may need to do a bit of research. :)
 
 1. Why is Hash.fetch useful?
+Hash.fetch returns the value for the given key.  If a key can't be found and no arguments or default it given it will raise a KeyError.  If a default or argument is provided it will be run when a value cannot be found.
 
 2. What is the disadvantage of single inheritance, and what's a possible solution to that problem?
+The disadvantage of single inheritance is that you can only have one superclass per class.
 
 3. Why are these classes initialized with an options hash?
 
