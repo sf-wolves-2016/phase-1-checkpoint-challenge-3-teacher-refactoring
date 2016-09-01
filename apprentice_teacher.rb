@@ -1,6 +1,7 @@
-class ApprenticeTeacher
+require_relative 'shared_behaviors'
+
+class ApprenticeTeacher < Behaviors
   attr_reader :age, :salary, :phase, :target_raise
-  attr_accessor :name
 
   def initialize(options={})
     @age = options.fetch(:age, 0)
@@ -9,9 +10,6 @@ class ApprenticeTeacher
     @phase = 3
   end
 
-  def offer_high_five
-    "High five!"
-  end
 
   def set_phase(num)
     @phase = num
