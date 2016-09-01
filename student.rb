@@ -2,8 +2,10 @@ class Student
   attr_reader :age, :phase
   attr_accessor :name
 
-  def initialize(options = {})
-    @phase = 1
+  PHASE = 1
+
+  def initialize(phase = PHASE, options = {})
+    @phase = phase
     @age = options.fetch(:age, 0)
     @name = options.fetch(:name, "")
   end
