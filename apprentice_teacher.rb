@@ -15,3 +15,4 @@ class ApprenticeTeacher < Faculty
     puts "Whoa. I know ruby-fu"
   end
 end
+

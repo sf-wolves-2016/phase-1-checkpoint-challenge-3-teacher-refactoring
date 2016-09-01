@@ -16,5 +16,4 @@ class Student < Human
     response
   end
 end
-kid = Student.new
-p kid.set_phase(2)
+
