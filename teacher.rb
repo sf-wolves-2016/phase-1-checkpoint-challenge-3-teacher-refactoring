@@ -19,7 +19,6 @@ class Teacher < Educator
     response
   end
 
-
   def set_performance_rating(rating)
     response = ""
     if rating > 90

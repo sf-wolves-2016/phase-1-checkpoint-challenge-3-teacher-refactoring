@@ -1,6 +1,6 @@
-require_relative 'people'
+require_relative 'person'
 
-class Educator < People 
+class Educator < Person 
 	def set_phase(num)
     @phase = num
     "Cool, I've always wanted to teach phase #{num}!"
