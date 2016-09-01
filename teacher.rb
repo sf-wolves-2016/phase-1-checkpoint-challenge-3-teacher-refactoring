@@ -37,6 +37,7 @@ class Teacher
 
   def set_performance_rating(rating)
     response = ""
+    
     if rating > 90
       receive_raise(@target_raise)
       response = "Yay, I'm a great employee!"
