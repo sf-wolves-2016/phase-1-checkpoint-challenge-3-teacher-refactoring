@@ -3,7 +3,7 @@ require_relative 'people'
 class Student < People
   attr_reader :phase
 
-   def initialize(options = {})
+  def initialize(options = {})
     super
     @phase = 1
   end
