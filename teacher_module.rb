@@ -1,11 +1,6 @@
 module Teachers
 	attr_reader :salary, :target_raise
 
-	def teach_stuff
-	    response = ""
-	    response
-  	end
-
 	def set_phase(num)
 		@phase = num
 		"Cool, I've always wanted to teach phase #{num}!"
