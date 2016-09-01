@@ -1,16 +1,14 @@
-class Student
-  attr_reader :age, :phase
-  attr_accessor :name
+require_relative 'school_community'
+
+class Student < SchoolCommunity
+  
 
   def initialize(options = {})
-    @phase = 1
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
+    super()
+      #@phase = 1
+
   end
 
-  def offer_high_five
-    "High five!"
-  end
 
   def set_phase(num)
     response = ""
