@@ -1,10 +1,15 @@
 require_relative 'shared_behaviors'
+require_relative 'teacher_attributes'
 
 class ApprenticeTeacher < Behaviors
+  include Teacher_attributes
   attr_reader :age, :salary, :phase, :target_raise
+
 
   def initialize(options={})
     @age = options.fetch(:age, 0)
+    @name = options.fetch(:name, "")
+    @target_raise = 800
     @phase = 3
   end
 
@@ -20,15 +25,6 @@ class ApprenticeTeacher < Behaviors
     response += "*drops crazy knowledge bomb* "
     response += "... You're welcome."
     response
-  end
-
-  def salary=(new_salary)
-    puts "This better be good!"
-    @salary = new_salary
-  end
-
-  def receive_raise(raise)
-    @salary += raise
   end
 
   def set_performance_rating(rating)
