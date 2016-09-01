@@ -5,7 +5,7 @@ attr_accessor :name
 
 
 	def initialize(options = {})
-    	@phase = 3
+    	@phase = options.fetch(:phase, 3)
     	@age = options.fetch(:age, 0)
     	@name = options.fetch(:name, "")
    	end
