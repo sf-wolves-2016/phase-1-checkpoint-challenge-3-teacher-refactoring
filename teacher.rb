@@ -1,16 +1,19 @@
-require_relative 'give_props'
+require_relative 'educator'
 
 class Teacher < Educator
-  attr_reader :performance_rating
 
   def initialize(options={})
     @target_raise = 1000
     super()
   end
 
-  def offer_high_five
-    "High five!"
-  end
+  def teach_stuff
+      response = ""
+      response += "Listen, class, this is how everything works, fo SHO! "
+      response += "*drops flat-out insane knowledge bomb* "
+      response += "... You're welcome. *saunters away*"
+      response
+    end
 
   def set_performance_rating(rating)
     response = ""

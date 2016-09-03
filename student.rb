@@ -1,10 +1,10 @@
-require_relative 'give_props'
+require_relative 'academic_person'
 
-class Student < Educator
+class Student < AcademicPerson
 
   def initialize(options = {})
     @phase = 1
-    @name = options.fetch(:name, "")
+    super()
   end
 
 

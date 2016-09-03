@@ -1,16 +1,10 @@
-require_relative 'give_props'
+require_relative 'educator'
 
 class ApprenticeTeacher < Educator
-  attr_reader :target_raise
 
   def initialize(options={})
     @target_raise = 800
     super()
-  end
-
-  def set_phase(num)
-    @phase = num
-    "Cool, I've always wanted to teach phase #{num}!"
   end
 
   def teach_stuff
