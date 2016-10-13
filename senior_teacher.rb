@@ -1,4 +1,5 @@
 require_relative 'teacher'
+require_relative 'dbc_person'
 
 class SeniorTeacher < Teacher
   attr_reader :age, :salary, :phase, :performance_rating, :target_raise

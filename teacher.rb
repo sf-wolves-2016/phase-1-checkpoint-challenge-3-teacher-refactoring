@@ -1,19 +1,21 @@
-class Teacher
+require_relative 'dbc_person'
+
+class Teacher < DBCPerson
   attr_reader :age, :salary, :phase, :target_raise
   attr_accessor :name
 
 def initialize(options={})
+    super
     @phase = 3
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
-    @target_raise = 1000
+    # @age = options.fetch(:age, 0)
+    # @name = options.fetch(:name, "")
   end
 
   def salary=(new_salary)
     puts "This better be good!"
     @salary = new_salary
   end
-  
+
   def offer_high_five
     "High five!"
   end
