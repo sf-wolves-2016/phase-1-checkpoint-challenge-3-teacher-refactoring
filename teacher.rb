@@ -9,6 +9,11 @@ def initialize(options={})
     @target_raise = 1000
   end
 
+  def salary=(new_salary)
+    puts "This better be good!"
+    @salary = new_salary
+  end
+  
   def offer_high_five
     "High five!"
   end
@@ -24,7 +29,7 @@ def initialize(options={})
 
   def set_performance_rating(rating)
     response = ""
-    if rating > 90
+    if rating > self.class::RATING
       response = "Yay, I'm a great employee!"
       receive_raise(@target_raise)
     else
@@ -33,4 +38,6 @@ def initialize(options={})
     end
     response
   end
+
+
 end
