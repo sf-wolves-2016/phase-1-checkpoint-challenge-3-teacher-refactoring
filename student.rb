@@ -1,6 +1,10 @@
-class Student
+require_relative 'personable'
+
+class Student 
   attr_reader :age, :phase
   attr_accessor :name
+
+  include Personable
 
   def initialize(options = {})
     @phase = 1
@@ -8,9 +12,9 @@ class Student
     @name = options.fetch(:name, "")
   end
 
-  def offer_high_five
-    "High five!"
-  end
+  # def offer_high_five
+  #   "High five!"
+  # end
 
   def set_phase(num)
     response = ""
