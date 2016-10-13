@@ -7,17 +7,11 @@ class Teacher < DBCPerson
 def initialize(options={})
     super
     @phase = 3
-    # @age = options.fetch(:age, 0)
-    # @name = options.fetch(:name, "")
   end
 
   def salary=(new_salary)
     puts "This better be good!"
     @salary = new_salary
-  end
-
-  def offer_high_five
-    "High five!"
   end
 
   def set_phase(num)
@@ -40,6 +34,4 @@ def initialize(options={})
     end
     response
   end
-
-
 end
