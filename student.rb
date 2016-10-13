@@ -1,18 +1,15 @@
-class Student
+require_relative 'devbootcamp'
+
+class Student < DevBootCamp
+
   attr_reader :age, :phase
-  attr_accessor :name
 
   def initialize(options = {})
+    super
     @phase = 1
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
   end
 
-  def offer_high_five
-    "High five!"
-  end
-
-  def set_phase(num)
+ def set_phase(num)
     response = ""
     if num == @phase
       response += "I'm doing phase #{@phase} again because "
@@ -29,5 +26,5 @@ class Student
     response += "WHOA! I've never thought of it quite like that before. "
     response += "Now I feel like a genius!"
     response
-  end
+end
 end

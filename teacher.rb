@@ -1,8 +1,8 @@
-require_relative 'staff'
+require_relative 'devbootcamp'
 
-class Teacher < Staff
-
-  attr_reader :performance_rating, :rating_rank
+class Teacher < DevBootCamp
+  attr_reader :age, :salary, :phase, :target_raise, :response, :performance_rating, :rating_rank
+  attr_accessor :name
 
   def initialize(options={})
     super

@@ -1,5 +1,7 @@
-class Staff 
-	attr_reader :age, :salary, :phase, :target_raise, :response
+
+class DevBootCamp
+
+	# attr_reader :age, :salary, :phase, :target_raise, :response
   	attr_accessor :name
 
   def initialize(options={})
@@ -35,7 +37,7 @@ class Staff
 
    def set_performance_rating(rating)
     response = ""
-    if rating > self.class::@rating_rank
+    if rating > self.rating_rank
       receive_raise(@target_raise)
       response = "Yay, I'm a great employee!"
     else
@@ -44,6 +46,6 @@ class Staff
     end
     response
   end
-  
+
 end
 
