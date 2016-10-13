@@ -1,10 +1,11 @@
 require_relative 'teacher'
 
-class ApprenticeTeacher < Teacher
-  # attr_reader :age, :salary, :phase, :target_raise
+class SeniorTeacher < Teacher
+  attr_reader :performance_rating
   # attr_accessor :name
 
-TARGET_RAISE = 800
+
+TARGET_RAISE = 1000
 @@phase = 3
 
   def self.phase
@@ -13,15 +14,15 @@ TARGET_RAISE = 800
 
   def teach_stuff
     response = ""
-    response += "Listen, class, this is how everything works. "
-    response += "*drops crazy knowledge bomb* "
-    response += "... You're welcome."
+    response += "Listen, class, this is how everything works, fo SHO! "
+    response += "*drops flat-out insane knowledge bomb* "
+    response += "... You're welcome. *saunters away*"
     response
   end
 
   def set_performance_rating(rating)
     response = ""
-    if rating > 80
+    if rating > 90
       response = "Yay, I'm a great employee!"
       receive_raise(@target_raise)
     else
@@ -31,7 +32,7 @@ TARGET_RAISE = 800
     response
   end
 
-  def attend_training_session
-    puts "Whoa. I know ruby-fu"
+  def lead_training_session
+    puts "Hey newbie!  Here are some common pitfalls.  Don't fall in them!"
   end
 end
