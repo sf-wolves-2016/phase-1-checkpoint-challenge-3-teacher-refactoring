@@ -17,7 +17,7 @@ class Teacher < DevBootCamp
     # response += "*drops flat-out insane knowledge bomb* "
     super
     @response += "... You're welcome. *saunters away*"
-    # response
+    @  response
   end
 
   # def set_performance_rating(rating)
